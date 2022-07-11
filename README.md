@@ -269,6 +269,84 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
 
-### 
+### Destroy resources 
+
+```
+fire@ashutoshhs-MacBook-Air terraform_code % terraform  destroy 
+aws_instance.ashuvm1: Refreshing state... [id=i-0720734abc6933852]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the
+following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_instance.ashuvm1 will be destroyed
+  - resource "aws_instance" "ashuvm1" {
+      - ami                                  = "ami-098e42ae54c764c35" -> null
+      - arn                                  = "arn:aws:ec2:us-west-2:061112302981:instance/i-0720734abc6933852" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-west-2c" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-0720734abc6933852" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t2.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - key_name                             = "ashukey" -> null
+      - monitoring                           = false -> null
+      - primary_network_interface_id         = "eni-0bc6f18a3053d82e8" -> null
+      - private_dns                          = "ip-172-31-12-53.us-west-2.compute.internal" -> null
+      - private_ip                           = "172.31.12.53" -> null
+      - public_dns                           = "ec2-34-222-93-163.us-west-2.compute.amazonaws.com" -> null
+      - public_ip                            = "34.222.93.163" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [
+          - "default",
+        ] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-d7a0b38d" -> null
+      - tags                                 = {
+          - "Name" = "ashulinuxvm-tf"
+        } -> null
+      - tags_all                             = {
+          - "Name" = "ashulinuxvm-tf"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-86c062ca",
+        ] -> null
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_put_response_hop_limit = 1 -> null
+          - http_tokens                 = "optional" -> null
+```
+
+
 
 
