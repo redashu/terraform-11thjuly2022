@@ -33,5 +33,10 @@ resource "aws_key_pair" "ashugen_key" {
 ```
 
 
+### use this link for HCL code
+
+[click_here](https://codeshare.io/JbNLKZ)
+
+
 
 
