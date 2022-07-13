@@ -82,6 +82,15 @@ details-required = "54.149.38.212 and id i-0d949c715ea9ad4a5"
 fire@ashutoshhs-MacBook-Air tf_best % 
 ```
 
+### Infra planning 
+
+<img src="infra.png">
+
+### home-work
+
+<img src="home.png">
+
+
 
 
 
