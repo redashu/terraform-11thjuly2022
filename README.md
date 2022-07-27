@@ -1,1 +1,8 @@
-# terraform-11thjuly2022
+# terraform- Revision 
+
+<img src="tfrev.png">
+
+### link to chat 
+
+[click_here](https://codeshare.io/AdB3kx)
+
