@@ -41,3 +41,54 @@ resource "aws_instance" "ashuvm1" {
 }
 ```
 
+### creating or understanding modules 
+
+```
+fire@ashutoshhs-MacBook-Air tff % mkdir modules 
+fire@ashutoshhs-MacBook-Air tff % mkdir modules/websevers
+fire@ashutoshhs-MacBook-Air tff % mkdir modules/databases
+fire@ashutoshhs-MacBook-Air tff % 
+```
+
+
+### terraform for managing container based infra 
+
+```
+[root@ip-172-31-16-36 containers]# cat  main.tf 
+terraform {
+  required_providers {
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "2.20.0"
+    }
+  }
+}
+
+provider "docker" {
+  host = "unix:///var/run/docker.sock"
+}
+
+```
+
+###  launching image and creating contaienr 
+
+```
+[root@ip-172-31-16-36 containers]# cat  image.tf 
+resource "docker_image" "myimg" {
+
+	name = "oraclelinux:8.4"
+
+}
+
+
+resource "docker_container" "ashuc1" {
+
+	name = "myc1"
+	image = "${docker_image.myimg.name}"
+	command = [ "sleep","100" ]
+
+}
+
+```
+
+
